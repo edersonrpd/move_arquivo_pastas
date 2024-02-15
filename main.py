@@ -1,5 +1,6 @@
 # Importa as bibliotecas necessárias
 import os
+import shutil
 from tkinter.filedialog import askdirectory
 
 
@@ -36,7 +37,7 @@ def mover_arquivo(nome_arquivo, pasta_origem, pasta_destino, nova_pasta):
         os.mkdir(caminho_nova_pasta)
 
     # Move o arquivo para a nova pasta
-    os.rename(nome_completo_original, nome_completo_final)
+    shutil.move(nome_completo_original, nome_completo_final)
 
 
 # Função principal que organiza os arquivos
